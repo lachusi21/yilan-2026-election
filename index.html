@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 宜蘭縣長選舉對照</title>
+<meta name="description" content="林國漳與吳宗憲：基本介紹、主要政見與爭議對照">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap">
+<style>
+:root{
+  --ground:#F1F4F1;
+  --surface:#FFFFFF;
+  --surface-2:#F7F9F7;
+  --ink:#1B2226;
+  --ink-2:#4F5A5E;
+  --ink-3:#7A8589;
+  --line:#D8DFDA;
+  --accent:#2F6A70;
+  --accent-soft:#DCEBEC;
+  --dpp:#2C7447;
+  --dpp-soft:#E2EFE6;
+  --kmt:#2A5494;
+  --kmt-soft:#E1E9F5;
+  --flag:#9A620F;
+  --flag-soft:#F5EAD6;
+  --false:#8A3B52;
+  --false-soft:#F3E2E8;
+  --shadow:0 1px 2px rgba(20,40,40,.06),0 4px 16px rgba(20,40,40,.05);
+  --serif:"Noto Serif TC","Songti TC","PMingLiU","MingLiU",serif;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei","Heiti TC",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#111618;--surface:#192023;--surface-2:#1E262A;
+    --ink:#E5EBE8;--ink-2:#AAB5B1;--ink-3:#7D8986;--line:#2C3639;
+    --accent:#82BFC4;--accent-soft:#1D3336;
+    --dpp:#74C394;--dpp-soft:#1A3124;--kmt:#8AAEEA;--kmt-soft:#1C283D;
+    --flag:#E2AC52;--flag-soft:#372B16;--false:#E08BA4;--false-soft:#3A1F29;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#111618;--surface:#192023;--surface-2:#1E262A;
+  --ink:#E5EBE8;--ink-2:#AAB5B1;--ink-3:#7D8986;--line:#2C3639;
+  --accent:#82BFC4;--accent-soft:#1D3336;
+  --dpp:#74C394;--dpp-soft:#1A3124;--kmt:#8AAEEA;--kmt-soft:#1C283D;
+  --flag:#E2AC52;--flag-soft:#372B16;--false:#E08BA4;--false-soft:#3A1F29;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+header.top{padding:40px 0 28px}
+.eyebrow{font-size:12px;letter-spacing:.14em;color:var(--ink-3);font-weight:500}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(30px,5vw,44px);line-height:1.2;margin:6px 0 14px;text-wrap:balance;letter-spacing:.02em}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--ink-2);font-size:14px;align-items:baseline}
+.meta b{font-family:var(--mono);font-weight:500;color:var(--ink)}
+.countdown{display:inline-flex;align-items:baseline;gap:6px}
+.countdown .n{font-family:var(--mono);font-size:22px;color:var(--accent);font-weight:500;font-variant-numeric:tabular-nums}
+
+/* ---------- candidate cards ---------- */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.cand{background:var(--surface);border-radius:14px;box-shadow:var(--shadow);padding:20px 22px;display:grid;grid-template-rows:auto auto 1fr;gap:10px;border-top:4px solid var(--c)}
+.cand.dpp{--c:var(--dpp);--cs:var(--dpp-soft)}
+.cand.kmt{--c:var(--kmt);--cs:var(--kmt-soft)}
+.cand-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.cand-name{font-family:var(--serif);font-weight:900;font-size:30px;line-height:1.2;letter-spacing:.04em}
+.party{font-size:12.5px;font-weight:500;color:var(--c);background:var(--cs);padding:2px 10px;border-radius:999px;white-space:nowrap}
+.cand-id{color:var(--ink-2);font-size:14px}
+.cand-facts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px;margin:0;align-self:end}
+.cand-facts dt{color:var(--ink-3)}
+.cand-facts dd{margin:0}
+.slogan{font-family:var(--serif);font-weight:600;color:var(--c)}
+.order-note{font-size:12px;color:var(--ink-3);margin-top:10px}
+
+/* ---------- tabs ---------- */
+nav.tabs{position:sticky;top:0;z-index:5;background:var(--ground);border-bottom:1px solid var(--line);margin-top:28px}
+.tablist{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tablist::-webkit-scrollbar{display:none}
+.tab{appearance:none;border:0;background:none;font:inherit;font-size:15px;font-weight:500;color:var(--ink-2);padding:14px 16px 12px;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-1px;display:flex;align-items:center;gap:8px}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.tab .count{font-family:var(--mono);font-size:11.5px;background:var(--surface-2);color:var(--ink-3);padding:0 7px;border-radius:999px;border:1px solid var(--line)}
+.tab[aria-selected="true"] .count{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+
+main{padding:26px 0 60px}
+.panel[hidden]{display:none}
+.panel-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.panel-head h2{font-family:var(--serif);font-weight:900;font-size:24px;margin:0;line-height:1.3}
+.panel-head p{margin:2px 0 0;color:var(--ink-2);font-size:14px;max-width:62ch}
+.toggle-all{appearance:none;font:inherit;font-size:13px;color:var(--accent);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+.toggle-all:hover{border-color:var(--accent)}
+
+/* ---------- outline items ---------- */
+.outline{display:flex;flex-direction:column;gap:10px}
+details.item{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+details.item[open]{box-shadow:var(--shadow);border-color:transparent}
+details.item>summary{list-style:none;cursor:pointer;padding:15px 18px;display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center}
+details.item>summary::-webkit-details-marker{display:none}
+details.item>summary:hover .s-title{color:var(--accent)}
+.s-title{font-weight:700;font-size:16px;line-height:1.5}
+.s-hint{grid-column:1;color:var(--ink-3);font-size:13.5px;line-height:1.55}
+.chev{grid-row:1/span 2;grid-column:2;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);color:var(--ink-2);transition:transform .2s ease}
+details.item[open] .chev{transform:rotate(180deg);background:var(--accent-soft);color:var(--accent)}
+.chev svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2}
+.body{padding:2px 18px 18px;border-top:1px solid var(--line)}
+
+/* two-column compare */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:14px}
+.col{padding:0 18px}
+.col:first-child{padding-left:0;border-right:1px solid var(--line)}
+.col:last-child{padding-right:0}
+.col h4{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.06em;display:flex;align-items:center;gap:8px}
+.col.dpp h4{color:var(--dpp)} .col.kmt h4{color:var(--kmt)}
+.dot{width:8px;height:8px;border-radius:50%;background:currentColor;flex:none}
+.col ul{margin:0;padding-left:1.1em}
+.col li{margin:3px 0}
+.col li::marker{color:var(--ink-3)}
+.col p{margin:0 0 6px}
+.none{color:var(--ink-3);font-size:14px;font-style:normal}
+.sub{font-weight:700;margin:10px 0 2px;font-size:14px}
+.sub:first-of-type{margin-top:0}
+.num{font-family:var(--mono);font-size:.95em;font-variant-numeric:tabular-nums}
+.note{margin:14px 0 0;font-size:13px;color:var(--ink-2);background:var(--surface-2);border-radius:8px;padding:8px 12px}
+
+/* poll */
+.poll{width:100%;border-collapse:collapse;font-size:14px;margin-top:14px}
+.poll-wrap{overflow-x:auto}
+.poll th,.poll td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+.poll th{font-weight:500;color:var(--ink-3);font-size:12.5px}
+.bar{display:flex;align-items:center;gap:8px;min-width:150px}
+.bar i{display:block;height:8px;border-radius:4px;background:var(--c)}
+.bar span{font-family:var(--mono);font-variant-numeric:tabular-nums;min-width:3.5em}
+.b-dpp{--c:var(--dpp)} .b-kmt{--c:var(--kmt)}
+.src-tag{font-size:12px;border-radius:4px;padding:1px 7px;white-space:nowrap}
+.src-tag.neutral{background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line)}
+.src-tag.internal{background:var(--flag-soft);color:var(--flag)}
+
+/* common ground */
+.common{margin-top:22px;background:var(--accent-soft);border-radius:12px;padding:16px 20px}
+.common h3{margin:0 0 6px;font-size:15px;color:var(--accent)}
+.common ul{margin:0;padding-left:1.1em}
+
+/* ---------- controversies ---------- */
+.warn{display:flex;gap:12px;background:var(--flag-soft);color:var(--ink);border-radius:12px;padding:14px 18px;margin-bottom:22px;font-size:14px}
+.warn strong{color:var(--flag)}
+.cgroup{margin-top:26px}
+.cgroup:first-of-type{margin-top:0}
+.cgroup-h{display:flex;align-items:baseline;gap:12px;margin:0 0 10px}
+.cgroup-h h3{font-family:var(--serif);font-weight:900;font-size:20px;margin:0}
+.cgroup-h .party{font-family:var(--sans)}
+.kmtc{--c:var(--kmt);--cs:var(--kmt-soft)} .dppc{--c:var(--dpp);--cs:var(--dpp-soft)}
+details.item.contro{border-left:4px solid var(--c)}
+.chips{grid-column:1;display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.chip{font-size:12px;padding:1px 8px;border-radius:4px;line-height:1.7}
+.chip.accuse{background:var(--flag-soft);color:var(--flag)}
+.chip.media{background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line)}
+.chip.false{background:var(--false-soft);color:var(--false)}
+.chip.who{color:var(--ink-3);padding-left:0}
+.claim{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.claim>div{border-radius:10px;padding:12px 14px;background:var(--surface-2)}
+.claim h5{margin:0 0 6px;font-size:12.5px;letter-spacing:.08em;color:var(--ink-3);font-weight:700}
+.claim ul{margin:0;padding-left:1.1em}
+.claim li{margin:3px 0}
+
+.ctable-wrap{overflow-x:auto;margin-top:26px;background:var(--surface);border-radius:12px;border:1px solid var(--line)}
+.ctable{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.ctable th,.ctable td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.ctable tr:last-child td{border-bottom:0}
+.ctable thead th{font-size:13px;background:var(--surface-2)}
+.ctable thead th.dpp{color:var(--dpp)} .ctable thead th.kmt{color:var(--kmt)}
+.ctable tbody th{font-weight:500;color:var(--ink-2);white-space:nowrap}
+
+/* ---------- sources ---------- */
+.src-group{margin-bottom:22px}
+.src-group h3{font-size:14px;letter-spacing:.06em;color:var(--ink-3);margin:0 0 8px;font-weight:700}
+.src-list{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.src-list li{padding:9px 16px;border-bottom:1px solid var(--line);font-size:14px;display:flex;gap:12px;justify-content:space-between;align-items:baseline}
+.src-list li:last-child{border-bottom:0}
+.src-list .outlet{color:var(--ink-3);font-size:12.5px;white-space:nowrap}
+
+footer{border-top:1px solid var(--line);padding:18px 0 40px;color:var(--ink-3);font-size:13px}
+
+@media (max-width:720px){
+  header.top{padding-top:28px}
+  .duo,.cmp,.claim{grid-template-columns:1fr}
+  .col,.col:first-child,.col:last-child{padding:0;border:0}
+  .col+.col{border-top:1px dashed var(--line);margin-top:14px;padding-top:14px}
+  .src-list li{flex-direction:column;gap:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+
+<header class="top wrap">
+  <div class="eyebrow">2026 九合一選舉 · 宜蘭縣</div>
+  <h1>宜蘭縣長選舉：林國漳 vs 吳宗憲</h1>
+  <div class="meta">
+    <span>投票日 <b>2026-11-28</b>（六）</span>
+    <span class="countdown">距投票 <span class="n" id="days">74</span> 天</span>
+    <span>資料截至 <b>2026-09-14</b></span>
+    <span>現任縣長林姿妙（國民黨）兩任屆滿，不得連任</span>
+  </div>
+
+  <div class="duo">
+    <article class="cand dpp">
+      <div class="cand-head">
+        <div class="cand-name">林國漳</div>
+        <span class="party">民主進步黨 提名</span>
+      </div>
+      <div class="cand-id">執業律師 · 宜蘭市人 · 首次參選</div>
+      <dl class="cand-facts">
+        <dt>出生</dt><dd><span class="num">1968-12-10</span>（57 歲）</dd>
+        <dt>學歷</dt><dd>台北大學法律研究所碩士</dd>
+        <dt>主軸</dt><dd class="slogan">宜蘭好主漳 · 文化治縣</dd>
+      </dl>
+    </article>
+    <article class="cand kmt">
+      <div class="cand-head">
+        <div class="cand-name">吳宗憲</div>
+        <span class="party">中國國民黨 提名 · 民眾黨共推</span>
+      </div>
+      <div class="cand-id">不分區立委 · 前檢察官 · 首次參選縣長</div>
+      <dl class="cand-facts">
+        <dt>出生</dt><dd><span class="num">1971-09-27</span>（54 歲）</dd>
+        <dt>學歷</dt><dd>輔仁大學法律系、台灣大學工業工程研究所</dd>
+        <dt>主軸</dt><dd class="slogan">團結宜蘭走新路</dd>
+      </dl>
+    </article>
+  </div>
+  <p class="order-note">左右排列順序不代表選票號次；號次由選委會另行抽籤決定。</p>
+</header>
+
+<nav class="tabs" aria-label="內容分頁">
+  <div class="wrap">
+    <div class="tablist" role="tablist">
+      <button class="tab" role="tab" id="tab-bio" aria-controls="p-bio" aria-selected="true">基本介紹 <span class="count">5</span></button>
+      <button class="tab" role="tab" id="tab-policy" aria-controls="p-policy" aria-selected="false" tabindex="-1">主要政見 <span class="count">8</span></button>
+      <button class="tab" role="tab" id="tab-contro" aria-controls="p-contro" aria-selected="false" tabindex="-1">爭議與負面新聞 <span class="count">9</span></button>
+      <button class="tab" role="tab" id="tab-src" aria-controls="p-src" aria-selected="false" tabindex="-1">資料來源</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ================= 基本介紹 ================= -->
+<section class="panel" id="p-bio" role="tabpanel" aria-labelledby="tab-bio">
+  <div class="panel-head">
+    <div>
+      <h2>基本介紹</h2>
+      <p>點選任一項目展開，兩位候選人的資料會左右並列對照。</p>
+    </div>
+    <button class="toggle-all" type="button">全部展開</button>
+  </div>
+  <div class="outline">
+
+    <details class="item" open>
+      <summary><span class="s-title">出身與學歷</span><span class="s-hint">魚販之子的在地律師 vs. 三個碩士學位的前檢察官</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body"><div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳</h4>
+          <ul>
+            <li>出生於宜蘭縣宜蘭市舊城區，父親靠賣魚養活一家五口，媒體稱他為「魚販之子」</li>
+            <li>台北大學法律研究所碩士</li>
+            <li>25 歲考上律師</li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲</h4>
+          <ul>
+            <li>高中時參加過野百合學運</li>
+            <li>輔仁大學法律系、台灣大學工業工程研究所</li>
+            <li>報導稱他擁有法律、會計、工業工程三個碩士學位；黨主席鄭麗文介紹他時，也提到他是台大公衛博士候選人</li>
+          </ul>
+        </div>
+      </div></div>
+    </details>
+
+    <details class="item">
+      <summary><span class="s-title">職業與公職經歷</span><span class="s-hint">律師、教職、縣府委員會 vs. 檢察官、新北法制局長、立委</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body"><div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳</h4>
+          <ul>
+            <li>畢業後在台北執業；27 歲受時任縣長游錫堃邀請回宜蘭服務</li>
+            <li>宜蘭縣律師公會理事長、法律扶助基金會宜蘭分會會長</li>
+            <li>車禍受難者關懷協會創辦人／理事長</li>
+            <li>2000 年起在宜蘭社區大學授課 25 年，宜蘭大學兼課 17 年以上</li>
+            <li>自稱擔任過縣府各局處二、三十個委員會的委員（環保、文化、民政、廉政、勞工等）</li>
+            <li>信賴台灣之友會宜蘭分會理事長；行政院顧問、華航獨立董事等職（見「爭議」分頁）</li>
+            <li><strong>沒有當過民意代表或公務員</strong></li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲</h4>
+          <ul>
+            <li>檢察官，歷任桃園、士林、南投地檢署；辦過重大刑案、緝毒、金融等案件，有 11 年肅貪經驗，人稱「貪官剋星」</li>
+            <li>辦過八里雙屍案</li>
+            <li>擔任過中央警察大學講師、台中科技大學副教授級專技人員</li>
+            <li><span class="num">2020–2024</span> 新北市政府法制局局長</li>
+            <li><span class="num">2024</span> 起任第 11 屆不分區立委，擔任過司法及法制委員會召委；在宜蘭設服務處</li>
+            <li>2025 年底接任國民黨文傳會主委，<span class="num">2026-03</span> 為了參選辭去，改任黨發言人</li>
+          </ul>
+        </div>
+      </div></div>
+    </details>
+
+    <details class="item">
+      <summary><span class="s-title">參選過程</span><span class="s-hint">民進黨徵召 vs. 連過兩關民調</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body"><div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳</h4>
+          <ul>
+            <li>原本是無黨籍，<span class="num">2025-10</span> 獲民進黨徵召，中執會通過</li>
+            <li>表示接受提名後會加入民進黨</li>
+            <li>形容自己是在宜蘭紮根 50 多年的人，不是「橫空出世」</li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲</h4>
+          <ul>
+            <li><span class="num">2026-02</span> 國民黨黨內民調，以些微差距勝過宜蘭縣議長張勝德</li>
+            <li><span class="num">2026-05-04</span> 「藍白合」全民調，勝過民眾黨前立委陳琬惠，由兩黨共同推薦</li>
+            <li>報導稱這是宜蘭地方首見的「兩次全民調」</li>
+          </ul>
+        </div>
+      </div></div>
+    </details>
+
+    <details class="item">
+      <summary><span class="s-title">與宜蘭的關係、個人風格</span><span class="s-hint">在地深耕、君子之爭 vs. 外地來的「司法硬漢」</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body"><div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳</h4>
+          <ul>
+            <li>土生土長的宜蘭人，宜蘭高中校友會、律師界都成立了後援會</li>
+            <li>個性謙和，想打「君子之爭」；第一次參選，選舉語言和台風還在磨練</li>
+            <li>說自己「好不容易說服太太」才出來選</li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲</h4>
+          <ul>
+            <li>不是宜蘭出身；當立委時開始在宜蘭設服務處、經營地方</li>
+            <li>形象是站在前線「擋子彈」的檢察官，媒體稱他是宜蘭藍白「最強母雞」</li>
+            <li>有台北市長蔣萬安等人來站台；自稱家中地位最低，現在是新生女兒的「奶爸」</li>
+          </ul>
+        </div>
+      </div></div>
+    </details>
+
+    <details class="item">
+      <summary><span class="s-title">民調</span><span class="s-hint">5 月時差距很小；9 月林營公布的內部民調顯示林領先</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body">
+        <div class="poll-wrap">
+          <table class="poll">
+            <thead><tr><th>時間</th><th>性質</th><th>林國漳</th><th>吳宗憲</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="num">2026-05</td>
+                <td><span class="src-tag neutral">藍白合民調中的對比數字</span></td>
+                <td><div class="bar b-dpp"><i style="width:57.8px"></i><span>28.9%</span></div></td>
+                <td><div class="bar b-kmt"><i style="width:55.2px"></i><span>27.6%</span></div></td>
+              </tr>
+              <tr>
+                <td class="num">2026-09</td>
+                <td><span class="src-tag internal">林國漳競選總部的內部民調</span></td>
+                <td><div class="bar b-dpp"><i style="width:75.6px"></i><span>37.8%</span></div></td>
+                <td><div class="bar b-kmt"><i style="width:56px"></i><span>28.0%</span></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">9 月那份是林營自己委託的內部民調，不是中立調查。同一份民調中，「看好度」是林 41.3% 對吳 22.7%。吳宗憲批評這是綠營的「策略性民調」，說國民黨中央掌握的數據完全不同。條形長度以 0–50% 為比例繪製。</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- ================= 主要政見 ================= -->
+<section class="panel" id="p-policy" role="tabpanel" aria-labelledby="tab-policy" hidden>
+  <div class="panel-head">
+    <div>
+      <h2>主要政見</h2>
+      <p>整體來看，吳宗憲主打交通建設和給家庭的直接補貼，林國漳主打治水、農漁業、教育這類長期發展。點選議題展開對照。</p>
+    </div>
+    <button class="toggle-all" type="button">全部展開</button>
+  </div>
+  <div class="outline">
+
+    <details class="item" open>
+      <summary><span class="s-title">交通建設</span><span class="s-hint">吳：台 62 線延伸、鐵路高架化（主打政見）｜林：高鐵接駁、縣內轉乘網</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body"><div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳</h4>
+          <ul>
+            <li>強化高鐵的聯外建設</li>
+            <li>完善縣內的轉乘接駁路網，讓高鐵效益擴散到各鄉鎮，不只集中在車站周邊</li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲：任督二脈交通計畫</h4>
+          <p class="sub">對外</p>
+          <ul>
+            <li>台 62 線延伸到宜蘭，分段招標加快施工；再往南延伸到蘇澳，串聯龍德、利澤工業區和蘇澳港</li>
+            <li>全力爭取高鐵，打造「北北基宜」生活圈</li>
+          </ul>
+          <p class="sub">縣內</p>
+          <ul>
+            <li>沿蘭陽溪堤岸共構東西向快速道路</li>
+            <li>台 2 庚延伸線、宜蘭 B 聯絡道、二結聯絡道、冬山交流道</li>
+            <li>完成全線鐵路高架化（他批評這件事已經拖了 33 年）</li>
+          </ul>
+          <p class="sub">管理</p>
+          <ul>
+            <li>成立智慧交通治理中心，整合車流、事故、停車、觀光人流數據</li>
+            <li>「2平1亮1靜」：路面平整、人行道通暢、LED 路燈、噪音管制</li>
+          </ul>
+        </div>
+      </div></div>
+    </details>
+
+    <details class="item">
+      <summary><span class="s-title">高鐵延伸宜蘭</span><span class="s-hint">林：提出三項承諾，主張現在就提前布局｜吳：提出四項願景，重在追進度</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body">
+        <p style="margin:12px 0 0;color:var(--ink-2);font-size:14px">背景：高鐵由南港延伸到宜蘭，全長約 60.6 公里，完工後南港到宜蘭約 20 多分鐘，計畫已於 2026 年 7 月核定。</p>
+        <div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳：三項承諾</h4>
+          <ul>
+            <li><strong>保障居民權益</strong>：絕不讓居民為公共利益蒙受損失</li>
+            <li><strong>結合地方規劃</strong>：和地方居民充分溝通協商</li>
+            <li><strong>公開透明</strong>：設統一的資訊平台，確保徵收補償合理</li>
+          </ul>
+          <p class="sub">主張</p>
+          <ul>
+            <li>「別等通車才準備」：交通、產業、房價、土地要超前部署</li>
+            <li>守住農地和自然環境，避免無序擴張</li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲：四項願景</h4>
+          <ul>
+            <li><strong>資訊完全公開</strong>：建立高鐵專屬平台，追蹤進度</li>
+            <li><strong>提高調度層級</strong>：由副秘書長以上層級親自統籌</li>
+            <li><strong>保障在地權益</strong>：建設、補償、環保三者兼顧</li>
+            <li><strong>完善鐵道路網</strong>：全線鐵路高架化，高鐵與台鐵串聯</li>
+          </ul>
+        </div>
+      </div></div>
+    </details>
+
+    <details class="item">
+      <summary><span class="s-title">家庭、育兒與長者照顧</span><span class="s-hint">吳：「三明治世代減壓」，直接發補貼｜林：智慧敬老卡、青年婚育宅</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body"><div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳</h4>
+          <ul>
+            <li><strong>智慧敬老卡</strong>：65 歲以上長者每年 <span class="num">12,000</span> 點，可跨月、多元使用</li>
+            <li><strong>400 戶</strong>青年婚育宅</li>
+            <li>配合中央強化幼兒托育</li>
+            <li>口號是「孩子有希望、青年有出路、長輩有依靠」</li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲</h4>
+          <ul>
+            <li><strong>小寶貝，我來挺</strong>：0 到 3 歲嬰幼兒每月發 <span class="num">1,000</span> 元嬰幼兒用品消費券</li>
+            <li><strong>一鄉鎮一公托</strong>：擴大公托量能</li>
+            <li><strong>老大人，我來顧</strong>：長者免繳健保費（1 月時說 70 歲以上，競選網站現寫下調到 65 歲）</li>
+            <li>65 歲以上擴大發放重陽敬老金；提高長青食堂餐費補助，補助社區協會開課</li>
+            <li>原住民長者：補助皮蛇疫苗、假牙等；大同鄉全人照護擴大到南澳鄉，推遠距醫療</li>
+          </ul>
+        </div>
+      </div></div>
+    </details>
+
+    <details class="item">
+      <summary><span class="s-title">產業與青年就業</span><span class="s-hint">兩人都想發展 AI 產業：吳主打宜蘭科學園區，林主打「20 分鐘首都圈」</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body"><div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳</h4>
+          <ul>
+            <li>利用高鐵帶來的「20 分鐘首都圈」優勢，發展無人載具、AI、生醫產業</li>
+            <li>爭取研發機構進駐</li>
+            <li>引進高科技，推動農漁業轉型，擦亮「宜蘭製造」招牌</li>
+            <li>提前布局人才政策，吸引青年返鄉</li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲</h4>
+          <ul>
+            <li>以宜蘭科學園區為核心，引進 AI、無人機、無人船、軟體、新創產業，前提是不汙染</li>
+            <li>承接北士科、桃園航空城、新竹科學園區外溢的產業</li>
+            <li>針對低薪：公開職場薪資數據，打造 <strong>MIY（Made In Yilan）</strong>品牌</li>
+            <li>觀光：爭取旅行團至少在宜蘭住一晚</li>
+          </ul>
+        </div>
+      </div></div>
+    </details>
+
+    <details class="item">
+      <summary><span class="s-title">農漁業</span><span class="s-hint">林：農保補助 95%、冷鏈、「宜蘭嚴選」｜吳：反沿海風機、在地採購、花生品牌</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body"><div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳</h4>
+          <ul>
+            <li>首度加入農業保險的農民，保費補助 <span class="num">95%</span></li>
+            <li>收購老舊漁船，引進現代化冷鏈技術</li>
+            <li>把「宜蘭嚴選」品牌推向國際</li>
+            <li>農業尾水循環再利用</li>
+            <li>前漁業署長謝大文公開肯定這套政見</li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲</h4>
+          <ul>
+            <li><strong>反對沿海大型風機</strong>：曾和議員戴「逆風」頭巾參與居民陳情</li>
+            <li>學校營養午餐、長青食堂優先採購在地農產品</li>
+            <li>協助五結花生建立品牌、拓展行銷通路</li>
+          </ul>
+        </div>
+      </div></div>
+    </details>
+
+    <details class="item">
+      <summary><span class="s-title">治水與環境</span><span class="s-hint">林：「宜蘭勁水大縣章」（主打政見）｜吳：報導中未見專項治水政見</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body"><div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳：宜蘭勁水大縣章</h4>
+          <ul>
+            <li><strong>全流域治理</strong>：上游植樹保水，中游建微型森林和滯洪池，下游增設抽水站，形成立體防洪系統</li>
+            <li>增設 <span class="num">10</span> 座抽水站，原則是「最小面積、最快退水、最高安全」</li>
+            <li><strong>汙水接管率 34% → 75%</strong>：8 年內新增 8 萬戶，全縣達到約 14.6 萬戶</li>
+            <li>布建 7 大水資源處理系統</li>
+            <li>他強調「產業必須建立在安全的土地上」</li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲</h4>
+          <p class="none">截至 9 月中旬，報導中未見專項治水政見。與環境相關的主要是：反對沿海大型風機，以及發展產業「不汙染、以環保為主」的前提。</p>
+        </div>
+      </div></div>
+    </details>
+
+    <details class="item">
+      <summary><span class="s-title">教育</span><span class="s-hint">兩人都反對草率裁併學校｜吳：午餐全免、校安人員｜林：宜蘭學、平板、AI 教育</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body"><div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳：打造宜蘭大教室</h4>
+          <ul>
+            <li><strong>宜蘭學</strong>：把地方特色和本土語言融入教材</li>
+            <li>補足國小平板缺口，成立 AI 與 STEAM 教育中心</li>
+            <li>結合在地特色發展雙語；建立六大特色技職學群，銜接就業</li>
+            <li>為老師提供法律支援，成立結合 AI 的行政減量小組</li>
+            <li>反對草率裁併學校，主張山區、海邊學校發展各自的文化特色</li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲</h4>
+          <ul>
+            <li>編列專款，推動<strong>教職員與弱勢生午餐全免</strong></li>
+            <li>研究降低師生比、減輕老師行政負擔；定期舉辦面對面教育座談</li>
+            <li>設置校園安全人員和公設辯護人</li>
+            <li>反對裁併學校，改用校際聯盟、混齡教學因應少子化</li>
+          </ul>
+        </div>
+      </div></div>
+    </details>
+
+    <details class="item">
+      <summary><span class="s-title">治理方式</span><span class="s-hint">吳：「行動治理」，定期住進原鄉｜林：12 鄉鎮市巡迴政見說明會</span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+      <div class="body"><div class="cmp">
+        <div class="col dpp"><h4><span class="dot"></span>林國漳</h4>
+          <ul>
+            <li>在全縣 12 鄉鎮市巡迴舉辦「宜蘭好主漳」政見說明會，首站在壯圍鄉</li>
+            <li>主打「文化治縣」，希望把宜蘭的文化底蘊轉化為發展核心</li>
+            <li>強調要用正面政策對決抹黑</li>
+          </ul>
+        </div>
+        <div class="col kmt"><h4><span class="dot"></span>吳宗憲：行動治理</h4>
+          <ul>
+            <li>每兩個月至少到原鄉住一次，和鄉親面對面交流</li>
+            <li>整合幸福巴士、醫療巡迴車和在地計程車，方便長者就醫</li>
+            <li>處理原住民保留地的法規限制問題</li>
+            <li>承諾每月追蹤交通建設進度</li>
+          </ul>
+        </div>
+      </div></div>
+    </details>
+
+  </div>
+
+  <div class="common">
+    <h3>兩人的共同點</h3>
+    <ul>
+      <li>都反對草率裁併學校</li>
+      <li>高鐵延伸都強調資訊公開、保障居民權益</li>
+      <li>都想引進 AI、無人載具等不汙染的高科技產業</li>
+      <li>風格上：吳宗憲多是具體工程和直接補貼，比較容易讓人馬上感受到；林國漳偏系統規劃和長期建設（治水、汙水下水道）</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 爭議 ================= -->
+<section class="panel" id="p-contro" role="tabpanel" aria-labelledby="tab-contro" hidden>
+  <div class="panel-head">
+    <div>
+      <h2>爭議與負面新聞</h2>
+      <p>每一項都把指控內容和被批評方的回應並列。標籤說明這項爭議的性質。</p>
+    </div>
+    <button class="toggle-all" type="button">全部展開</button>
+  </div>
+
+  <div class="warn" role="note">
+    <div><strong>閱讀前請注意：</strong>以下大多是<strong>對手陣營提出的指控</strong>，尚未經過司法或獨立調查證實。選舉期間互相攻擊很常見，請分清楚「事實」和「政治攻防」。</div>
+  </div>
+
+  <div class="cgroup dppc">
+    <div class="cgroup-h"><h3>林國漳</h3><span class="party">民主進步黨</span></div>
+    <div class="outline">
+
+      <details class="item contro" open>
+        <summary><span class="s-title">「肥貓、政治酬庸」：兼任多個公股職位</span><span class="chips"><span class="chip accuse">對手指控</span><span class="chip who">國民黨立院黨團、國民黨宜蘭縣黨部、民眾黨陳琬惠 · 2026-09</span></span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+        <div class="body"><div class="claim">
+          <div><h5>指控內容</h5><ul>
+            <li>律師本業之外，還擔任行政院顧問、華航獨立董事（現任）、國光電力董事（中油轉投資）、環能海運監察人</li>
+            <li>對手稱這些職務年報酬合計超過 200 萬元，而他「毫無運輸、航空及大型企業治理背景」</li>
+            <li>陳琬惠另外質疑行政院顧問是否為有給職</li>
+          </ul></div>
+          <div><h5>林方回應</h5><ul>
+            <li>律師受託擔任獨董或監察人，本來就屬於律師業務，目的是督促企業落實風控</li>
+            <li>符合金管會的獨董資格（五年實務經驗、大專講師、專技證照，三項符合一項即可）</li>
+            <li>任內每年參與審計、風管等會議二十多次，專業「禁得起檢驗」</li>
+            <li>民進黨縣黨部認為這是吳宗憲策動的抹黑，不排除提告</li>
+          </ul></div>
+        </div></div>
+      </details>
+
+      <details class="item contro">
+        <summary><span class="s-title">派系背景：「新潮流」「雙德意志」</span><span class="chips"><span class="chip accuse">對手指控</span><span class="chip who">國民黨宜蘭縣黨部、陳琬惠</span></span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+        <div class="body"><div class="claim">
+          <div><h5>指控內容</h5><ul>
+            <li>說他「橫空出世」，獲徵召唯一的原因是民進黨新潮流派系支持，反映賴清德、陳金德「雙德」的意志</li>
+            <li>他是賴清德後援會「信賴之友會」宜蘭分會理事長，參選前卻自稱無黨無派</li>
+          </ul></div>
+          <div><h5>林方回應</h5><ul>
+            <li>強調自己在宜蘭執業、教書 30 年，專業受到肯定</li>
+            <li>民進黨反批吳宗憲「才是鄭麗文的傀儡」</li>
+            <li>林國漳說要堅持「君子之爭」，「宜蘭鄉親自有公道」</li>
+          </ul></div>
+        </div></div>
+      </details>
+
+      <details class="item contro">
+        <summary><span class="s-title">沒有從政和行政經驗</span><span class="chips"><span class="chip accuse">對手指控</span><span class="chip media">媒體觀察</span><span class="chip who">國民黨；關鍵評論網分析</span></span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+        <div class="body"><div class="claim">
+          <div><h5>批評內容</h5><ul>
+            <li>沒當過民意代表或公務員，被質疑不了解政府機關如何運作</li>
+            <li>媒體評論認為「實務不足」可能成為他的致命傷</li>
+          </ul></div>
+          <div><h5>林方回應</h5><ul>
+            <li>在縣府各局處擔任過二、三十個委員會的委員，涵蓋環保、文化、民政、廉政、勞工等，「當然有行政經驗」</li>
+          </ul></div>
+        </div></div>
+      </details>
+
+    </div>
+  </div>
+
+  <div class="cgroup kmtc">
+    <div class="cgroup-h"><h3>吳宗憲</h3><span class="party">中國國民黨</span></div>
+    <div class="outline">
+
+      <details class="item contro">
+        <summary><span class="s-title">「空降」質疑：不是宜蘭出身</span><span class="chips"><span class="chip accuse">對手指控</span><span class="chip media">媒體觀察</span><span class="chip who">林國漳陣營發言人高大凱等</span></span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+        <div class="body"><div class="claim">
+          <div><h5>批評內容</h5><ul>
+            <li>他是從台北來參選的「非宜蘭人」，不了解在地情況</li>
+            <li>媒體分析普遍把「空降」列為他最大的弱點</li>
+          </ul></div>
+          <div><h5>吳方回應</h5><ul>
+            <li>「前年就在宜蘭努力服務」，當立委時就設了服務處</li>
+            <li>反問：賴清德在台南、陳水扁當台北市長、宜蘭出身的陳菊去高雄，算不算空降？批評民進黨「雙標」</li>
+            <li>用「企業聘請專業經理人」來比喻</li>
+            <li>父親吳東霖說：「只是先到後到，有心為地方服務又有什麼差別。」</li>
+          </ul></div>
+        </div></div>
+      </details>
+
+      <details class="item contro">
+        <summary><span class="s-title">被批在立法院「砍預算」</span><span class="chips"><span class="chip accuse">對手指控</span><span class="chip who">民進黨立委陳培瑜、宜蘭立委陳俊宇</span></span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+        <div class="body"><div class="claim">
+          <div><h5>指控內容</h5><ul>
+            <li>藍白在立法院卡中央總預算超過 300 天，還要通案統刪</li>
+            <li>批評他「在地方演好人，在中央大砍預算」</li>
+            <li>陳俊宇說他是「雙面人」，「鄉親面前演君子，回台北變流氓」</li>
+          </ul></div>
+          <div><h5>吳方回應</h5><ul>
+            <li>反批行政院在沒有法源依據的情況下統刪 636 億元地方一般補助款，違反「信賴保護原則」</li>
+            <li>主張真正刪地方救命錢的是中央；陣營批評對手「顛倒是非」</li>
+          </ul></div>
+        </div></div>
+      </details>
+
+      <details class="item contro">
+        <summary><span class="s-title">福利政見被批「空頭支票」</span><span class="chips"><span class="chip accuse">對手指控</span><span class="chip who">民進黨宜蘭縣議員</span></span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+        <div class="body"><div class="claim">
+          <div><h5>指控內容</h5><ul>
+            <li>他的福利政策大約需要 <span class="num">32</span> 億元</li>
+            <li>中央雖然多給宜蘭 128 億元統籌分配稅款，但原本由中央負擔的計畫型補助可能改由地方自己出，實際可用的可能只有 16 億元左右</li>
+          </ul></div>
+          <div><h5>吳方回應</h5><ul>
+            <li>立法院已三讀通過財劃法「二修」，明定中央補助款「不得低於前一年」</li>
+            <li>批評對手拿主計處的舊版核定表說嘴，沒做功課</li>
+          </ul></div>
+        </div></div>
+      </details>
+
+      <details class="item contro">
+        <summary><span class="s-title">立委任內的政治立場：選罷法、中選會</span><span class="chips"><span class="chip media">政治立場</span><span class="chip who">2025 大罷免期間</span></span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+        <div class="body"><div class="claim">
+          <div><h5>事件</h5><ul>
+            <li>擔任過司法及法制委員會召委，是 2025 年大罷免期間國民黨的主要戰將之一</li>
+            <li>支持修選罷法、加嚴罷免連署規定；反對者認為這是在提高罷免門檻</li>
+            <li>公開批評中選會主委李進勇「公認不公正」</li>
+          </ul></div>
+          <div><h5>吳方說法與影響</h5><ul>
+            <li>他說修法是為了防止偽造連署，避免罷免結束後變成「大告發時代」</li>
+            <li>這些立場深受藍營支持者肯定，但也讓他被綠營視為對立性很強的政治人物</li>
+          </ul></div>
+        </div></div>
+      </details>
+
+      <details class="item contro">
+        <summary><span class="s-title">與黨中央的互動引發猜測</span><span class="chips"><span class="chip media">媒體觀察</span><span class="chip who">2025-12 至 2026-07</span></span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+        <div class="body"><div class="claim">
+          <div><h5>事件</h5><ul>
+            <li>2025 年底接任國民黨文傳會主委，外界一度猜他不選縣長了；2026-03 辭任，改當黨發言人</li>
+            <li>5 月首場造勢，站台名單沒有黨主席鄭麗文；幾天後鄭麗文到宜蘭縣黨部開座談，吳宗憲也沒出席</li>
+          </ul></div>
+          <div><h5>後續</h5><ul>
+            <li>7 月鄭麗文到宜蘭助選時自己說他「陷入苦戰」，並批評宜蘭長期被民進黨、新潮流當作「政治禁臠」，指控中央動員國家資源幫對手</li>
+          </ul></div>
+        </div></div>
+      </details>
+
+      <details class="item contro">
+        <summary><span class="s-title">「同名前科」網站誤植（他是受害方）</span><span class="chips"><span class="chip false">不實資訊</span><span class="chip who">2026-09</span></span><span class="chev" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 6l5 5 5-5"/></svg></span></summary>
+        <div class="body"><div class="claim">
+          <div><h5>事件</h5><ul>
+            <li>名為「候選人前科查核站」的網站，把其他同名同姓「吳宗憲」的判決放到他名下</li>
+            <li>包括綜藝天王吳宗憲的「掏空聯明科技案」、民進黨籍前桃園市議員吳宗憲的「詐領助理費案」</li>
+          </ul></div>
+          <div><h5>事實與處理</h5><ul>
+            <li>他本人<strong>沒有這些前科</strong></li>
+            <li>他批評這是「竹篙湊菜刀」，已經蒐證送檢調單位</li>
+            <li>若在網路上看到類似內容，要特別小心</li>
+          </ul></div>
+        </div></div>
+      </details>
+
+    </div>
+  </div>
+
+  <div class="ctable-wrap">
+    <table class="ctable">
+      <thead><tr><th></th><th class="dpp">林國漳</th><th class="kmt">吳宗憲</th></tr></thead>
+      <tbody>
+        <tr><th>最大弱點</th><td>被批「肥貓、酬庸」，兼任多個公股職位</td><td>被批「空降」，不是宜蘭出身</td></tr>
+        <tr><th>經歷質疑</th><td>沒有從政和行政經驗</td><td>沒有地方行政經驗，但當過新北法制局長</td></tr>
+        <tr><th>派系與政治標籤</th><td>新潮流支持、賴清德後援會理事長</td><td>立法院藍營戰將：砍預算、修選罷法</td></tr>
+        <tr><th>政見質疑</th><td>目前較少被針對</td><td>福利政策財源被質疑</td></tr>
+        <tr><th>遭遇不實資訊</th><td>未見明顯案例</td><td>被同名前科網站誤植</td></tr>
+        <tr><th>一句話</th><td>爭議集中在「憑什麼」：職位和提名是不是靠派系關係</td><td>爭議集中在「是不是宜蘭人」，以及立法院作為對宜蘭是好是壞</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= 來源 ================= -->
+<section class="panel" id="p-src" role="tabpanel" aria-labelledby="tab-src" hidden>
+  <div class="panel-head">
+    <div>
+      <h2>資料來源</h2>
+      <p>頁面內容整理自以下報導和網站，截至 2026 年 9 月 14 日。選戰仍在進行，政見和爭議可能隨時更新。</p>
+    </div>
+  </div>
+
+  <div class="src-group">
+    <h3>候選人背景與提名</h3>
+    <ul class="src-list">
+      <li><a href="https://zh.wikipedia.org/zh-tw/2026%E5%B9%B4%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E7%9B%B4%E8%BD%84%E5%B8%82%E9%95%B7%E5%8F%8A%E7%B8%A3%E5%B8%82%E9%95%B7%E9%81%B8%E8%88%89" target="_blank" rel="noopener">2026年中華民國直轄市長及縣市長選舉</a><span class="outlet">維基百科</span></li>
+      <li><a href="https://zh.wikipedia.org/zh-tw/%E6%9E%97%E5%9C%8B%E6%BC%B3" target="_blank" rel="noopener">林國漳</a><span class="outlet">維基百科</span></li>
+      <li><a href="https://zh.wikipedia.org/zh-tw/%E5%90%B3%E5%AE%97%E6%86%B2_(1971%E5%B9%B4)" target="_blank" rel="noopener">吳宗憲 (1971年)</a><span class="outlet">維基百科</span></li>
+      <li><a href="https://udn.com/news/story/6656/9073108" target="_blank" rel="noopener">宜蘭縣長 民進黨徵召無黨籍律師林國漳參選</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://udn.com/news/story/124652/9521613" target="_blank" rel="noopener">人物側寫／面對藍白進攻 魚販之子林國漳挑戰宜蘭縣長</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://udn.com/news/story/124652/9523131" target="_blank" rel="noopener">人物側寫／吳宗憲 昔日檢察官化身宜蘭藍白最強母雞</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://www.cna.com.tw/news/aipl/202602280048.aspx" target="_blank" rel="noopener">國民黨公布宜蘭縣長提名民調 吳宗憲險勝張勝德</a><span class="outlet">中央社</span></li>
+      <li><a href="https://news.pts.org.tw/article/806586" target="_blank" rel="noopener">宜蘭縣長藍白合民調揭曉 藍委吳宗憲勝出取得提名資格</a><span class="outlet">公視新聞網</span></li>
+      <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5558776" target="_blank" rel="noopener">宜蘭縣長最新民調 林國漳領先吳宗憲9.8％</a><span class="outlet">自由時報</span></li>
+      <li><a href="https://news.ltn.com.tw/news/Yilan/breakingnews/5559138" target="_blank" rel="noopener">林國漳競總公布領先9.8％ 吳宗憲：綠營「策略性民調」</a><span class="outlet">自由時報</span></li>
+    </ul>
+  </div>
+
+  <div class="src-group">
+    <h3>政見</h3>
+    <ul class="src-list">
+      <li><a href="https://www.yilan2026.tw/" target="_blank" rel="noopener">吳宗憲競選網站</a><span class="outlet">yilan2026.tw</span></li>
+      <li><a href="https://udn.com/news/story/7328/9659278" target="_blank" rel="noopener">吳宗憲拋「宜蘭任督二脈交通計畫」</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://www.cna.com.tw/news/aloc/202608030232.aspx" target="_blank" rel="noopener">高鐵延伸宜蘭 吳宗憲提4願景、林國漳允3承諾</a><span class="outlet">中央社</span></li>
+      <li><a href="https://udn.com/news/story/124652/9752460" target="_blank" rel="noopener">宜蘭交鋒 吳宗憲推行動治理 林國漳巡迴政見</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5571475" target="_blank" rel="noopener">宜蘭首創藍綠縣長參選人教育論壇</a><span class="outlet">自由時報</span></li>
+      <li><a href="https://www.scooptw.com/cnews/491805/%E5%96%8A%E8%A9%B1%E3%80%8C%E6%8A%8A%E6%88%91%E7%95%B6%E4%BA%94%E7%B5%90%E4%BA%BA%E3%80%8D%E3%80%80%E5%90%B3%E5%AE%97%E6%86%B2%E6%89%BF%E8%AB%BE%E5%8A%9B%E6%8C%BA%E8%8A%B1%E7%94%9F%E8%BE%B2/" target="_blank" rel="noopener">喊話「把我當五結人」 吳宗憲承諾力挺花生農</a><span class="outlet">獨家報導</span></li>
+      <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5535886" target="_blank" rel="noopener">吳宗憲提原民4大政見 主打長照醫療與社宅</a><span class="outlet">自由時報</span></li>
+      <li><a href="https://udn.com/news/story/7328/9480985" target="_blank" rel="noopener">林國漳發表「宜蘭勁水大縣章」治水政見</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://www.scooptw.com/cnews/524632/%E6%9E%97%E5%9C%8B%E6%BC%B3%E8%BE%B2%E6%BC%81%E6%94%BF%E8%A6%8B%E7%8D%B2%E7%94%A2%E5%AE%98%E5%AD%B8%E8%83%8C%E6%9B%B8%E3%80%80%E6%8E%A8%E8%BE%B2%E6%A5%AD%E4%BF%9D%E9%9A%AA%E8%A3%9C%E5%8A%A9%E3%80%81/" target="_blank" rel="noopener">林國漳農漁政見獲產官學背書</a><span class="outlet">獨家報導</span></li>
+      <li><a href="https://newtalk.tw/news/view/2026-07-23/1048980" target="_blank" rel="noopener">高鐵延伸宜蘭正式核定！林國漳：別等通車才準備</a><span class="outlet">Newtalk</span></li>
+      <li><a href="https://www.cdns.com.tw/articles/1458386" target="_blank" rel="noopener">林國漳發表教育政見 深耕「宜蘭學」從本土出發</a><span class="outlet">中華日報</span></li>
+      <li><a href="https://udn.com/news/story/124652/9751615" target="_blank" rel="noopener">林國漳啟動「宜蘭好主漳」政見說明會</a><span class="outlet">聯合新聞網</span></li>
+    </ul>
+  </div>
+
+  <div class="src-group">
+    <h3>爭議與負面新聞</h3>
+    <ul class="src-list">
+      <li><a href="https://udn.com/news/story/124652/9741151" target="_blank" rel="noopener">疑林國漳是肥貓 國民黨團批靠民進黨新潮流「吃國家」</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://udn.com/news/story/124652/9742669" target="_blank" rel="noopener">綠宜蘭縣長參選人林國漳回應「肥貓」說 專業禁得起檢驗</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5568079" target="_blank" rel="noopener">陳琬惠控新潮流「黨意律師」 林國漳反擊政治抹黑</a><span class="outlet">自由時報</span></li>
+      <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5567266" target="_blank" rel="noopener">國民黨宜蘭縣黨部點名林國漳是酬庸肥貓</a><span class="outlet">自由時報</span></li>
+      <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5573649" target="_blank" rel="noopener">林國漳挨批肥貓、傀儡 民進黨黨部：吳宗憲才是鄭麗文傀儡</a><span class="outlet">自由時報</span></li>
+      <li><a href="https://www.scooptw.com/local_news/524980/%E8%B3%AA%E7%96%91%E6%9E%97%E5%9C%8B%E6%BC%B3%E3%80%8C%E6%A9%AB%E7%A9%BA%E5%87%BA%E4%B8%96%E3%80%8D%E6%8A%95%E5%85%A5%E5%AE%9C%E8%98%AD%E7%B8%A3%E9%95%B7%E9%81%B8%E8%88%89-%E5%9C%8B%E6%B0%91%E9%BB%A8/" target="_blank" rel="noopener">質疑林國漳「橫空出世」 國民黨宜縣黨部批「雙德」意志</a><span class="outlet">獨家報導</span></li>
+      <li><a href="https://www.thenewslens.com/article/267106" target="_blank" rel="noopener">宜蘭縣長選舉前瞻：吳宗憲面臨空降困境，實務不足成林國漳致命傷</a><span class="outlet">關鍵評論網</span></li>
+      <li><a href="https://udn.com/news/story/124652/9482433" target="_blank" rel="noopener">宜蘭藍白合出線吳宗憲駁空降：賴清德、陳水扁可以其他人不行？</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://www.cna.com.tw/news/aloc/202605050182.aspx" target="_blank" rel="noopener">吳宗憲引專業經理人為例駁空降 批民進黨雙標</a><span class="outlet">中央社</span></li>
+      <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5503597" target="_blank" rel="noopener">立委吳宗憲父子首同台回應空降質疑</a><span class="outlet">自由時報</span></li>
+      <li><a href="https://udn.com/news/story/124652/9666260" target="_blank" rel="noopener">立委陳培瑜輔選林國漳批藍白砍預算 吳宗憲陣營回嗆</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5450257" target="_blank" rel="noopener">綠營批在立院惡意卡預算 吳宗憲競辦反擊</a><span class="outlet">自由時報</span></li>
+      <li><a href="https://news.nextapple.com/politics/20260908/73B77E6A0D32CB249D4B1F8471896A33" target="_blank" rel="noopener">宜蘭立委：吳宗憲鄉親面前演君子回台北變流氓</a><span class="outlet">壹蘋新聞網</span></li>
+      <li><a href="https://udn.com/news/story/124652/9452912" target="_blank" rel="noopener">綠營批福利政策「空頭支票」 吳宗憲競辦回嗆</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://www.epochtimes.com/b5/25/2/11/n14434930.htm" target="_blank" rel="noopener">稱修法為阻偽造罷免連署 吳宗憲：不希望出現大告發時代</a><span class="outlet">大紀元</span></li>
+      <li><a href="https://udn.com/news/story/124323/8723854" target="_blank" rel="noopener">公投併罷免？吳宗憲曝李進勇個性：公認的不公正</a><span class="outlet">聯合新聞網</span></li>
+      <li><a href="https://www.cna.com.tw/news/aipl/202603180266.aspx" target="_blank" rel="noopener">吳宗憲辭國民黨文傳會主委 尹乃菁接任</a><span class="outlet">中央社</span></li>
+      <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5440844" target="_blank" rel="noopener">吳宗憲首造勢邀蔣萬安站台 輔選大咖不見鄭麗文</a><span class="outlet">自由時報</span></li>
+      <li><a href="https://www.ettoday.net/news/20260715/3201707.htm" target="_blank" rel="noopener">嘆吳宗憲陷苦戰！鄭麗文批：宜蘭長期被民進黨當作政治禁臠</a><span class="outlet">ETtoday</span></li>
+      <li><a href="https://www.chinatimes.com/realtimenews/20260911002537-260407" target="_blank" rel="noopener">宜蘭縣長參選人吳宗憲遭「同名前科」移花接木</a><span class="outlet">中時新聞網</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">本頁為選舉資訊整理，內容來自公開報導，不代表支持任何候選人。資料截至 2026-09-14。</div>
+</footer>
+
+<script>
+(function(){
+  // countdown to polling day (Asia/Taipei)
+  try{
+    var el=document.getElementById('days');
+    var now=new Date();
+    var tpe=new Date(now.getTime()+(now.getTimezoneOffset()+480)*60000);
+    var today=Date.UTC(tpe.getFullYear(),tpe.getMonth(),tpe.getDate());
+    var d=Math.round((Date.UTC(2026,10,28)-today)/86400000);
+    if(d>=0) el.textContent=d; else el.parentNode.textContent='已投票';
+  }catch(e){}
+
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function select(tab,focus){
+    tabs.forEach(function(t){
+      var on=t===tab;
+      t.setAttribute('aria-selected',on);
+      t.tabIndex=on?0:-1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden=!on;
+    });
+    if(focus) tab.focus();
+    try{history.replaceState(null,'','#'+tab.id.replace('tab-',''));}catch(e){}
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){
+      select(t);
+      var nav=document.querySelector('nav.tabs');
+      if(nav.getBoundingClientRect().top<=0) window.scrollTo({top:nav.offsetTop,behavior:'auto'});
+    });
+    t.addEventListener('keydown',function(e){
+      var k=e.key, j=null;
+      if(k==='ArrowRight') j=(i+1)%tabs.length;
+      else if(k==='ArrowLeft') j=(i-1+tabs.length)%tabs.length;
+      else if(k==='Home') j=0;
+      else if(k==='End') j=tabs.length-1;
+      if(j!==null){e.preventDefault();select(tabs[j],true);}
+    });
+  });
+  var h=(location.hash||'').slice(1);
+  var init=document.getElementById('tab-'+h);
+  if(init) select(init);
+
+  // expand / collapse all per panel
+  [].forEach.call(document.querySelectorAll('.panel'),function(p){
+    var btn=p.querySelector('.toggle-all');
+    if(!btn) return;
+    var items=p.querySelectorAll('details.item');
+    function sync(){
+      var all=[].every.call(items,function(d){return d.open;});
+      btn.textContent=all?'全部收合':'全部展開';
+    }
+    btn.addEventListener('click',function(){
+      var all=[].every.call(items,function(d){return d.open;});
+      [].forEach.call(items,function(d){d.open=!all;});
+      sync();
+    });
+    [].forEach.call(items,function(d){d.addEventListener('toggle',sync);});
+    sync();
+  });
+})();
+</script>
+
+</body>
+</html>
